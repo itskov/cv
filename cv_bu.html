@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eyal Itskovits - CV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #303030;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .header {
+            background: white;
+            color: #303030;
+            padding: 40px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+            color: #801010;
+        }
+
+        .header .subtitle {
+            font-size: 1.2em;
+            font-style: italic;
+            color: #555;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 40px;
+        }
+
+        .column {
+            min-width: 0;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            color: #801010;
+            border-bottom: 2px solid #801010;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .subsection-title {
+            font-size: 1.1em;
+            color: #801010;
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .personal-info {
+            background: white;
+            border: 2px solid #801010;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .personal-info p {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .personal-info strong {
+            min-width: 80px;
+            color: #801010;
+        }
+
+        .job-item, .education-item, .teaching-item, .experience-item {
+            margin-bottom: 20px;
+            page-break-inside: avoid;
+        }
+
+        .date {
+            font-size: 0.9em;
+            color: #666;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            font-size: 1.1em;
+            color: #303030;
+            margin-bottom: 3px;
+        }
+
+        .job-subtitle {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .job-description {
+            color: #555;
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        li {
+            margin-bottom: 6px;
+        }
+
+        .award-list {
+            list-style-type: none;
+            margin-left: 0;
+        }
+
+        .award-list li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .award-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #801010;
+            font-weight: bold;
+        }
+
+        .volunteer-item {
+            margin-bottom: 12px;
+        }
+
+        .volunteer-date {
+            font-weight: 600;
+            color: #801010;
+            margin-right: 10px;
+        }
+
+        .links a {
+            display: block;
+            color: #801010;
+            text-decoration: none;
+            margin-bottom: 8px;
+            transition: color 0.3s;
+        }
+
+        .links a:hover {
+            color: #a01515;
+            text-decoration: underline;
+        }
+
+        .publications {
+            grid-column: 1 / -1;
+            margin-top: 20px;
+            padding: 40px;
+            border-top: 3px solid #801010;
+            page-break-before: always;
+        }
+
+        .publication-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .publication-item:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #801010;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .page-1 {
+                page-break-after: always !important;
+                break-after: always !important;
+                min-height: 100vh;
+            }
+
+            .page-2 {
+                page-break-before: always !important;
+                break-before: always !important;
+            }
+
+            .publications {
+                page-break-before: always !important;
+                break-before: always !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-1">
+            <div class="header">
+                <h1>Eyal Itskovits</h1>
+                <p class="subtitle">Machine Learning Scientist in Drug Discovery and Computational Biology</p>
+            </div>
+
+            <div class="content">
+            <!-- Left Column -->
+            <div class="column">
+                <div class="section">
+                    <h2 class="section-title">Professional Experience</h2>
+
+                    <div class="job-item">
+                        <div class="date">2024-Current</div>
+                        <div class="job-title">Director of Machine Learning and Artificial Intelligence</div>
+                        <div class="job-subtitle">Leading GSK Flagship AI Scientist project</div>
+                        <div class="job-description">Leading a multi-team, globally distributed project, with direct reporting and engagement with GSK's Global Leadership Team (including CEO) and GSK's Board. The project aims to design a generative AI-based hypothesis generation engine that leverages internal and external data sources to enable scaled, efficient scientific discovery.</div>
+                    </div>
+
+                    <div class="job-item">
+                        <div class="date">2021-2024</div>
+                        <div class="job-title">Senior AIML Research Engineer and Team Leader</div>
+                        <div class="job-subtitle">Team leading, AIML Research</div>
+                        <div class="job-description">Lead a team of five PhD-level researchers building ML models for biological perturbation prediction and biomarker discovery in oncology. Supervised and mentored UK-based PhD student interns.</div>
+                    </div>
+
+                </div>
+
+
+                <div class="section">
+                    <h2 class="section-title">Education</h2>
+
+                    <div class="education-item">
+                        <div class="job-title">PhD Computer Science and Computational Biology, 2021</div>
+                        <div class="job-subtitle">Hebrew University of Jerusalem</div>
+                        <div class="job-description">Thesis: "Sensation of complex stimuli in the <i>C. elegans</i> nematode"</div>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="job-title">MSc Computer Science and Computational Biology, 2015</div>
+                        <div class="job-subtitle">Hebrew University of Jerusalem</div>
+                        <div class="job-description">Research topic:</div>
+                        <ul>
+                            <li>Prof. Alon Zaslaver - Developing machine learning models for tracking and characterizing high-throughput behavioral experiments</li>
+                        </ul>
+                        <div class="job-description">Rotational research:</div>
+                        <ul>
+                            <li>Prof. Sagiv Shifman - Modeling complex genetic effects underlying Autism Spectrum Disorder (ASD)</li>
+                            <li>Prof. Nir Friedman - Modeling epigenetic effects on gene expression</li>
+                        </ul>
+                    </div>
+
+                    <div class="education-item">
+                        <div class="job-title">BSc Computer Science and Computational Biology, 2012</div>
+                        <div class="job-subtitle">Hebrew University of Jerusalem</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Academic Experience</h2>
+
+                    <div class="experience-item">
+                        <div class="date">March 2013 – January 2020</div>
+                        <div class="job-title">PhD Candidate</div>
+                        <div class="job-subtitle">Prof. Alon Zaslaver's Group</div>
+                        <div class="job-description">I have been working on research questions dealing with neural encoding of complex stimuli, and with learning and memory in compact neural networks (See publications section).</div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="date">October 2013 – March 2013</div>
+                        <div class="job-title">MSc Student</div>
+                        <div class="job-subtitle">Rotational Student</div>
+                        <div class="job-description">
+                            <strong>Prof. Sagiv Shifman's Lab</strong> - I analysed large-scale datasets of individuals with autism spectrum disorder (ASD) in search of the genomic correlates of the syndrome.
+                            <br><br>
+                            <strong>Prof. Nir Friedman's Lab</strong> - I studied a novel gene-regulation mechanism.
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="date">October 2011 - October 2012</div>
+                        <div class="job-title">BSc Student</div>
+                        <div class="job-subtitle">Movement Ecology Lab</div>
+                        <div class="job-description">I used machine learning to classify animal behavior using accelerator temporal signal.</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Skills</h2>
+
+                    <h3 class="subsection-title">Data Analysis, Machine Learning and Software Engineering</h3>
+                    <p>Practical and theoretical experience with:</p>
+                    <ul>
+                        <li><strong>Statistical machine learning</strong></li>
+                        <li><strong>Deep-learning</strong></li>
+                        <li><strong>Signal processing</strong> and <strong>time-series</strong> analysis</li>
+                        <li><strong>Strong mathematical and statistical background</strong></li>
+                    </ul>
+
+                    <h3 class="subsection-title">Software Development</h3>
+                    <ul>
+                        <li>Experience with design and implementation of small and large software projects</li>
+                        <li>Proficient in <strong>C</strong>, <strong>C++</strong>, <strong>Python</strong>. Experience with server, desktop and web applications</li>
+                        <li>Experience with <strong>operating systems</strong> internals. Strong expertise with <strong>Linux</strong> environments and <strong>cloud computing</strong></li>
+                    </ul>
+
+                    <h3 class="subsection-title">Life Sciences</h3>
+                    <ul>
+                        <li>Experience with various <strong>molecular biology</strong> procedures</li>
+                        <li>Experience with advanced <strong>optical systems</strong></li>
+                        <li>Analysis of <strong>high-dimensional neural activity data</strong> and next-generation <strong>RNA Sequencing</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column -->
+            <div class="column">
+                <div class="personal-info">
+                    <p><strong>Address:</strong> Kharlap st. 52, Jerusalem</p>
+                    <p><strong>Phone:</strong> 054-2332640</p>
+                    <p><strong>Email:</strong> Eyal.x.itskovits@gsk.com</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Professional Service</h2>
+                    <h3 class="subsection-title">Conference Reviewer:</h3>
+                    <ul>
+                        <li>International Conference on Machine Learning (ICML), 2025</li>
+                        <li>Neural Information Processing Systems (NeurIPS), 2024</li>
+                        <li>International Conference on Learning Representations (ICLR) - ML For Drug Discovery Workshop, 2023</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Teaching Experience</h2>
+
+                    <div class="teaching-item">
+                        <div class="date">2014-2019</div>
+                        <div class="job-title">Probability and Statistics for the Life Sciences</div>
+                        <div class="job-subtitle">Hebrew University - Course 72301</div>
+                    </div>
+
+                    <div class="teaching-item">
+                        <div class="date">2013</div>
+                        <div class="job-title">OOP - Object Oriented Programming</div>
+                        <div class="job-subtitle">Hebrew University - Course 67125</div>
+                    </div>
+
+                    <div class="teaching-item">
+                        <div class="date">2012</div>
+                        <div class="job-title">General Genetics</div>
+                        <div class="job-subtitle">Hebrew University - Course 72155</div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Honors and Awards</h2>
+                    <ul class="award-list">
+                        <li>JBC Postdoctoral Fellowship - 2020</li>
+                        <li>HHMI Janelia's Junior Scientist Workshop on Machine Learning and Computer Vision participant - 2019</li>
+                        <li>'Next Generation of Neuroscience' workshop for Exceptional PhD Students - 2019</li>
+                        <li>The Irene and Michael Mochrik Award for Outstanding Genetics Students - 2018</li>
+                        <li>SMART Award, Alexander Silverman Institute of Life Sciences - 2018</li>
+                        <li>Excellent Teaching Assistant - 2013-2016, 2018-2019</li>
+                        <li>JBC Golden PhD Scholarship - 2017</li>
+                        <li>Best Poster - I-Core Single Molecule Biophysics Conference - 2015</li>
+                        <li>JBC Travel Scholarship - 2015</li>
+                        <li>Honorable Mention for poster - International Worm Meeting - 2015</li>
+                        <li>Mada - Life Sciences Excellence Program - 2013</li>
+                        <li>Dean's List - 2010-2012, 2013-2015</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Volunteering</h2>
+
+                    <div class="volunteer-item">
+                        <span class="volunteer-date">2016-2017</span>
+                        "Aleh" Running Team - Biweekly escorting of blind and visually impaired runners
+                    </div>
+
+                    <div class="volunteer-item">
+                        <span class="volunteer-date">2015-2017</span>
+                        "Magdilim Rosh" - Exposing high school students to neuroscience research
+                    </div>
+
+                    <div class="volunteer-item">
+                        <span class="volunteer-date">2014</span>
+                        "Exposure to Science" - Introducing research and basic science topics to adolescents from complex backgrounds
+                    </div>
+
+                    <div class="volunteer-item">
+                        <span class="volunteer-date">2011</span>
+                        "Magshimim Program" - Teaching computer science and information security to high school students from the social periphery
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Online Profiles</h2>
+                    <div class="links">
+                        <a href="https://scholar.google.co.il/citations?user=D36-7p8AAAAJ&hl=en" target="_blank">Google Scholar</a>
+                        <a href="https://www.linkedin.com/in/eyal-itskovits-9b41a51/?originalSubdomain=il" target="_blank">LinkedIn</a>
+                        <a href="https://github.com/itskov" target="_blank">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Publications Section - Full Width -->
+        <div class="page-2">
+            <div class="publications">
+                <h2 class="section-title">Publications</h2>
+
+                <div class="publication-item">
+                    <strong>E Itskovits</strong>, R Ruach, A Kazakov, A Zaslaver. 2018.<br>
+                    "Concerted pulsatile and graded neural dynamics enables efficient chemotaxis in C. elegans."<br>
+                    <strong>Nature Communications</strong> 9 (1), 2866.
+                </div>
+
+                <div class="publication-item">
+                    <strong>E Itskovits</strong>, A Levine, E Cohen, A Zaslaver. 2017.<br>
+                    "A multi-animal tracker for studying complex behaviors."<br>
+                    <strong>BMC Biology</strong> 15 (1), 29.
+                </div>
+
+                <div class="publication-item">
+                    A Azulay, <strong>E Itskovits</strong>, A Zaslaver. 2016.<br>
+                    "The C. elegans Connectome Consists of Homogenous Circuits with Defined Functional Roles."<br>
+                    <strong>PLoS Computational Biology</strong> 12 (9), e1005021.
+                </div>
+
+                <div class="publication-item">
+                    D Mukherjee, BM Ignatowska-Jankowska, <strong>E Itskovits</strong>, BJ Gonzales, et al. 2018.<br>
+                    "Salient experiences are represented by unique transcriptional signatures in the mouse brain."<br>
+                    <strong>eLife</strong> 7, e31220.
+                </div>
+
+                <div class="publication-item">
+                    S Iwanir, R Ruach, <strong>E Itskovits</strong>, CO Pritz, E Bokman, A Zaslaver. 2019.<br>
+                    "Irrational behavior in C. elegans arises from asymmetric modulatory effects within single sensory neurons."<br>
+                    <strong>Nature Communications</strong> 10 (1), 3202.
+                </div>
+
+                <div class="publication-item">
+                    C Pritz, <strong>E Itskovits</strong>, E Bokman, R Ruach, V Gritsenko, T Nelken, et al. 2023.<br>
+                    "Principles for coding associative memories in a compact neural network."<br>
+                    <strong>eLife</strong> 12, e74434.
+                </div>
+
+                <div class="publication-item">
+                    N Deshe, Y Eliezer, L Hoch, <strong>E Itskovits</strong>, E Bokman, S Ben-Ezra, et al. 2023.<br>
+                    "Inheritance of associative memories and acquired cellular changes in C. elegans."<br>
+                    <strong>Nature Communications</strong> 14 (1), 4232.
+                </div>
+
+                <div class="publication-item">
+                    H Ishtayeh, H Achache, E Kroizer, Y Rappaport, <strong>E Itskovits</strong>, H Gingold, et al. 2021.<br>
+                    "Systematic analysis of long intergenic non-coding RNAs in C. elegans germline uncovers roles in somatic growth."<br>
+                    <strong>RNA Biology</strong> 18 (3), 435-445.
+                </div>
+
+                <div class="publication-item">
+                    E Bokman, CO Pritz, R Ruach, <strong>E Itskovits</strong>, H Sharvit, A Zaslaver. 2024.<br>
+                    "Intricate response dynamics enhances stimulus discrimination in the resource-limited C. elegans chemosensory system."<br>
+                    <strong>BMC Biology</strong> 22 (1), 173.
+                </div>
+
+                <div class="publication-item">
+                    R Ruach, S Yellinek, <strong>E Itskovits</strong>, N Deshe, Y Eliezer, E Bokman, et al. 2022.<br>
+                    "A negative feedback loop in the GPCR pathway underlies efficient coding of external stimuli."<br>
+                    <strong>Molecular Systems Biology</strong> 18 (9), e10514.
+                </div>
+
+                <div class="publication-item">
+                    A Bean, A Weiner, A Hughes, <strong>E Itskovits</strong>, N Friedman, OJ Rando. 2016.<br>
+                    "Genome-wide histone modification patterns in Kluyveromyces Lactis reveal evolutionary adaptation of a heterochromatin-associated mark."<br>
+                    <strong>bioRxiv</strong>, 039776.
+                </div>
+
+                <div class="publication-item">
+                    I Kirshenboim, B Aviner, <strong>E Itskovits</strong>, A Zaslaver, L Broday. 2021.<br>
+                    "Dopamine-dependent biphasic behaviour under 'deep diving' conditions in Caenorhabditis elegans."<br>
+                    <strong>Proceedings of the Royal Society B</strong> 288 (1946), 20210128.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
